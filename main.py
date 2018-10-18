@@ -76,7 +76,7 @@ formate_sheet.cell(1, 8, '标准答案')
 # read excel
 
 # 1、读取文件
-workbook = xlrd.open_workbook(r'librarys.xlsx')
+workbook = xlrd.open_workbook(r'source.xlsx')
 
 # 2、读取LTE单选sheet数据内容
 single_select_sheet = workbook.sheet_by_name('LTE单选')
@@ -118,7 +118,7 @@ for i in range(2, rows_size, 1):
     formate_sheet.cell(i, 8, key)
 
 # 将整理的数据写入到新excel表格中
-outbook.save('single_select_result.xlsx')
+outbook.save('result.xlsx')
 
 
 
